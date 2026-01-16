@@ -1,4 +1,4 @@
-console.log("Day 02");
+// console.log("Day 02");
 
 // Variables: Variables are used to store data in JavaScript
 
@@ -6,13 +6,14 @@ console.log("Day 02");
 // - `let`: Block-scoped, can be reassigned
 // - `const`: Block-scoped, **cannot** be reassigned
 
-const address = "Bangalore";
+
+var address = "Bangalore";
 
 console.log(address);
 
-// address = "USA";
+address = "USA";
 
-// console.log(address);
+console.log(address);
 
 let age = 12;
 

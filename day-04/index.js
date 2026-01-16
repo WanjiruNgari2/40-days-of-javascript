@@ -113,7 +113,7 @@ switch (day) {
         console.log("Invalid Day Number")
 }
 
-let name = "Google"
+let name = "Google";
 
 switch(name) {
     case "tapaScript":
