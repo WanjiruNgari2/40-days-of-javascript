@@ -1,195 +1,263 @@
-// - [ ] **T-001**: Create an array of 5 elements using the Array Constructor.
-// let elements = [22, "stars", false, 2178978992n, "moon"];
+// // - [ ] **T-001**: Create an array of 5 elements using the Array Constructor.
+// // let elements = [22, "stars", false, 2178978992n, "moon"];
 
-// - [ ] **T-002**: Create an array of 3 empty slots.
-// let emptySlots = ["", "", ""];
+// // - [ ] **T-002**: Create an array of 3 empty slots.
+// // let emptySlots = ["", "", ""];
 
 
-// - [ ] **T-003**: Create an array of 6 elements using the Array literals and access the fourth element in the array using its `length` property.
-// let arr = [2, 3, 4, 7, 9, 8];
-// let fourth = arr[3];
+// // - [ ] **T-003**: Create an array of 6 elements using the Array literals and access the fourth element in the array using its `length` property.
+// // let arr = [2, 3, 4, 7, 9, 8];
+// // let fourth = arr[3];
 
-// - [ ] **T-004**: Use the `for` loop on the above array to print elements in the odd index.
-// let oddNums = [];
-// for (let i = 0; i < arr.length; i++) {
-//     if (i % 2 != 0) {
-//         oddNums.push(i);
-//     }
-// console.log(oddNums)
+// // - [ ] **T-004**: Use the `for` loop on the above array to print elements in the odd index.
+// // let oddNums = [];
+// // for (let i = 0; i < arr.length; i++) {
+// //     if (i % 2 != 0) {
+// //         oddNums.push(i);
+// //     }
+// // console.log(oddNums)
+
+// // }
+// // - [ ] **T-005**: Add one element at the front and the end of an array.
+// // arr.push('front');
+// // console.log(arr) //[ 2, 3, 4, 7, 9, 8, 'front' ];
+
+// // - [ ] **T-006**: Remove an element from the front and the end of an array.
+// // arr.pop();
+// // arr.shift();
+// // console.log(arr)   //[ 3, 4, 7, 9, 8 ]
+
+
+// // - [ ] **T-007**: Create an array containing the name of your favourite foods(10 foods). Destructure the 6th food element from the array using destructuring.
+// let favFoods = ["salad", "guac", "cheese", "fries", "peas", "pork", "stew", "pumpkins", "fish", "fruits"];
+// let sixth = favFoods[6]; //console.log(sixth); //stew
+
+// // - [ ] **T-008**: Take out the last 8 food items from the above array using the Array destructuring. Hint: rest parameter.
+// let [first, second, ...rest] = ["salad", "guac", "cheese", "fries", "peas", "pork", "stew", "pumpkins", "fish", "fruits"]; //console.log(rest);
+
+// // - [ ] **T-009**: Clone an Array(Shallow cloning)
+// let nums = [22, 33, 44];
+// let nums2 = nums;
+// let fake = nums.slice()
+// //   console.log(nums2);   console.log(nums === nums2);  console.log(nums === fake);
+
+
+// // - [ ] **T-010**: Empty an array using its length property
+// nums.length = 0; //console.log(nums); //[]
+
+// // - [ ] **T-011**: Create an array of 10 elements(number 1 to 10). Resize the array to length 6 once you find the number 5 in that array. Hint: Use `for-loop`.
+// let elems = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// for (i = 0; i < elems.length; i++) {
+//   if (i === 5) {
+//     elems.length = 6;
+//     //console.log(elems) //[]  [ 1, 2, 3, 4, 5, 6 ]
+//   }
+// }
+
+// // - [ ] **T-012**: Create an Array of 10 elements. Use the `splice()` method to empty the array.
+// // let cars = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// // cars.splice(0, 10);
+// // console.log(`cars: [${cars}]`); //cars: []
+
+// // - [ ] **T-013**: Create an Array of 10 elements. You can empty the array in multiple ways: using the `length` property, using the `pop()` method, 
+// // using the `shift()` method, setting the array with `[]`, or the `splice()` method. Which among these methods are most efficient and why?
+// // The setting of array with '[]' is the quickest way of emptying an array, 
+
+// // - [ ] **T-014**: What happens when you concatenate two empty arrays?
+// // the merged array has the value of an empty array 
+// let arrsen = []; let uburn = []; let merge = arrsen.concat(uburn); //console.log(merge);
+
+// // - [ ] **T-015**: How can you check if a value is partially matching with any of the elements of an Array?
+// // using includes() that gives true or false
+// let greeting = "Hello World";
+// if (greeting.includes("Hell")) {
+//   // console.log("It exists!") //It exists! 
+// }
+// // - [ ] **T-016**: What is the difference between the slice() and splice() methods?
+// // slice is used to copy Elements and their values, while splice adds removes elements in an arr 
+
+// // - [ ] **T-017**: Create an Array of alphanumeric strings. Sort the elements in both ascending and descending orders. You must be doing this in an immutable way such that the source array never gets modified.
+// let str = ["std001", "alpha432", "dukesamir33"];
+// str.sort(function (a, b) {
+//   return a === b ? 0 : a > b ? 1 : -1
+// });
+
+// // console.log(str) //[ 'alpha432', 'dukesamir33', 'std001' ] 
+// str.sort(function (a, b) {
+//   return a === b ? 0 : a > b ? -1 : 1
+// });
+// // console.log(str) //[ 'std001', 'dukesamir33', 'alpha432' ] 
+
+// // - [ ] **T-018**: Can you give examples of sparse and dense arrays?
+// // - [ ] **T-019**: Give a practical usages of the .fill() method 
+// let gender = ["female", "male", "both"];
+// gender.fill("human", 0, 3);
+// // console.log(gender) //[ 'human', 'human', 'human' ]
+// gender.fill("alive", 0, 2); //[ 'alive', 'alive', 'both' ]
+// // console.log(gender);
+
+// // - [ ] **T-020**: How to convert an array to a string?
+// let fin = [1, 2, 3]; let strn = fin.toString(); console.log(typeof strn); //string
+
+// // > Consider these input arrays for question **T-21** to **T-48**
+// // - `employees array`: An array of emplyees working in a department.
+
+const employees = [
+  { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
+  { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
+  { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
+  { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
+  { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
+  { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
+  { id: 7, name: "George", departmentId: 3, salary: 5200 },
+  { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
+  { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
+  { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
+];
+
+// // - `departments array`: An array of departments where emplyees work.
+
+const departments = [
+  { id: 1, name: "HR" },
+  { id: 2, name: "Engineering" },
+  { id: 3, name: "Marketing" },
+  { id: 4, name: "Sales" },
+];
+
+// // - [ ] **T-021**: Can you filter employees who work in the "Engineering" department?
+            // const engineering = employees.filter((employee) => {
+            //   return employee.departmentId === 2;
+            // });
+
+            // console.log(engineering)
+
+// // - [ ] **T-022**: Create a new array that combines employee names and department names in the format: "Alice (HR)".
+// let employeeNames = employees.map((employee) => {
+//   return employee.name;
+// });
+// console.log(employeeNames);
+
+// let departmentNames = departments.map((department) => {
+//   return department.name;
+// });
+// console.log(departmentNames);
+
+
+
+// // - [ ] **T-023**: Find the highest salary among employees.
+let highestSalary = employees.map((employee) => {
+  let all = employee.salary 
+  
+  
+  // all.map((i) => {
+  //   sorted = i.toSorted;
+  //   return sorted[0]
+  // })
+
+  console.log(all)  
+});
+console.log(highestSalary)
+
+// // - [ ] **T-024**: Check if there is at least one employee in the "Sales" department.
+// // - [ ] **T-025**: Write a function to filter employees earning more than 6000.
+// // - [ ] **T-026**: Create an array of employee names only.
+// // - [ ] **T-027**: Calculate the total salary of all employees using
+// // - [ ] **T-028**: Is there any employee earning less than 5000?
+// // - [ ] **T-029**: Find the first employee who earns exactly 5100.
+// // - [ ] **T-030**: Find the last employee in the "HR" department.
+// // - [ ] **T-031**: Find the first employee in the "Marketing" department.
+// // - [ ] **T-032**: Check if all employees earn more than 4000.
+// // - [ ] **T-033**: Find the first employee in the "Sales" and "HR" department.
+// // - [ ] **T-034**: Verify if all employees belong to a department listed in the departments array.
+// // - [ ] **T-035**: Log each employee's name and department name to the console.
+// // - [ ] **T-036**: Extract all employee names into a single array.
+// // - [ ] **T-037**: Increment each employee's salary by 10%
+// // - [ ] **T-038**: Assume each employee can have multiple skills. Create an array of employee skills and flatten them. Example: [{name: "Alice", skills: ["Excel", "Management"]}, ...].
+// // - [ ] **T-039**: Find the total salary of all employees working in the "Engineering" department.
+// // - [ ] **T-040**: Check if there is any department where all employees earn more than 5000.
+// // - [ ] **T-041**: Assume each employee has a projects array (e.g., { id: 1, name: "Alice", projects: ["Project A", "Project B"] }).
+// // Find the total number of unique projects being handled across all employees.
+// // - [ ] **T-042**: For each employee, find their department name and return an array of employee names with their department names.
+// // - [ ] **T-043**: Get a list of names of employees earning more than 6000.
+// // - [ ] **T-044**: Write a for-of loop to print the names of all employees from the employees array.
+// // - [ ] **T-045**: Using a for-of loop, print the names of employees earning more than 5000.
+// // - [ ] **T-046**: Modify the for-of loop to destructure each employee object and log their name and salary.
+// // - [ ] **T-047**: Write a for-of loop to match employees with their departments and print the results.
+// // - [ ] **T-048**: Use Array.prototype.entries() with a for-of loop to print the index and name of each employee.
+
+// // - [ ] **T-049**: Given the array-like object below, access the second element and log it:
+
+// //   ```js
+// //   const arrayLike = { 0: "First", 1: "Second", length: 2 };
+// //   ```
+
+// // - [ ] **T-050**: Write a function that takes a variable number of arguments and converts the arguments object into a real array using Array.from.
+// // - [ ] **T-051**: Write a snippet to select all div elements on a webpage (using document.querySelectorAll) and convert the resulting NodeList into an array.
+// // - [ ] **T-052**: Merge these two arrays into a single array:
+
+// //   ```js
+// //   const arr1 = [1, 2];
+// //   const arr2 = [3, 4];
+// //   ```
+
+// // - [ ] **T-053**: Create an array of n duplicate values using Array.from. Input: Create an array with 5 "A" values. Output: ["A", "A", "A", "A", "A"]
+// // - [ ] **T-054**: Use Array.from to convert a string like "Hello" into an array of characters.
+// // - [ ] **T-055**: For the array, ['apple', 'banana', 'apricot', 'mango', 'blueberry'], group words by their first letter using group().
+// // - [ ] **T-057**: From this array [3, 7, 3, 2, 3, 8, 7, 7], find the most repeated number. Hint: Use array method.
+// // - [ ] **T-058**: Find the median of [5, 2, 9, 1, 3, 6, 8].
+// // - [ ] **T-059**: Convert this array [['a', 1], ['b', 2], ['c', 3]], into { a: 1, b: 2, c: 3 } using array method(s).
+// // - [ ] **T-060**: Flatten and convert all letters to uppercase in one step using flatMap(). Here is input array: [['a', 'b'], ['c', 'd']].
+// // - [ ] **T-061**: Count the occurrences of each fruit in this array: ['apple', 'banana', 'apple', 'mango', 'banana', 'banana']
+// // - [ ] **T-062**: Extract extract [‘b’, ‘c’, ‘d’] using slice() from this array: ['a', 'b', 'c', 'd', 'e']
+// // - [ ] **T-063**: Sort the array [9, 3, 1, 6, 8] in ascending order using toSorted()
+// // - [ ] **T-064**: Reverse [1, 2, 3, 4, 5] using toReversed() and compare it with reverse()
+// // - [ ] **T-065**: Group the follwing array elements based on age(Adult vs Non-Adult):
+
+// // ```js
+// // const users = [
+// //   { name: 'Alice', age: 55 },
+// //   { name: 'Bob', age: 3 },
+// //   { name: 'Charlie', age: 25 },
+// // ];
+// // ```
+
+// // - [ ] **T-066**: Find the longest word in this sentence using Array and Array methods: 
+// "40 Days of JavaScript by tapaScript is a powerful initiative".
+
+// let adj = ["40 Days of JavaScript by tapaScript is a powerful initiative"];
+// for (let i = 0; i <= adj.length; i++) {
+//   // console.log(i) 
+//   let eachEl = [...adj];
+//   console.log(typeof eachEl);
+//   // let el = adj.split(' ');  
+//   console.log(eachEl)
 
 // }
-// - [ ] **T-005**: Add one element at the front and the end of an array.
-// arr.push('front');
-// console.log(arr) //[ 2, 3, 4, 7, 9, 8, 'front' ];
 
-// - [ ] **T-006**: Remove an element from the front and the end of an array.
-// arr.pop();
-// arr.shift();
-// console.log(arr)   //[ 3, 4, 7, 9, 8 ]
+// // - [ ] **T-067**: Find common elements between two arrays, [1, 2, 3, 4], [3, 4, 5, 6]
+// const ar1 = [1, 2, 3, 4];
+// const ar2 = [3, 4, 5, 6]
+// let common = null;
+// let both = null;
 
-
-// - [ ] **T-007**: Create an array containing the name of your favourite foods(10 foods). Destructure the 6th food element from the array using destructuring.
-let favFoods = ["salad", "guac", "cheese", "fries", "peas", "pork", "stew", "pumpkins", "fish", "fruits"];
-let sixth = favFoods[6]; //console.log(sixth); //stew
-
-// - [ ] **T-008**: Take out the last 8 food items from the above array using the Array destructuring. Hint: rest parameter.
-let [first, second, ...rest] = ["salad", "guac", "cheese", "fries", "peas", "pork", "stew", "pumpkins", "fish", "fruits"]; //console.log(rest);
-
-// - [ ] **T-009**: Clone an Array(Shallow cloning)
-let nums = [22, 33, 44];
-let nums2 = nums;
-let fake = nums.slice()
-//   console.log(nums2);   console.log(nums === nums2);  console.log(nums === fake);
+// function compare(a, b) {
+//   both = a.concat(b)
+//   console.log(both);
 
 
-// - [ ] **T-010**: Empty an array using its length property
-nums.length = 0; //console.log(nums); //[]
+//   for (let i = 0; i <= both.length; i++) {
+//     for (let m = 0; m <= both.length; m++) {
+//       if (i in both) {
+//         common.push(i);
+//       }
 
-// - [ ] **T-011**: Create an array of 10 elements(number 1 to 10). Resize the array to length 6 once you find the number 5 in that array. Hint: Use `for-loop`.
-let elems = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-for (i = 0; i < elems.length; i++) {
-    if (i === 5) {
-        elems.length = 6;
-        //console.log(elems) //[]  [ 1, 2, 3, 4, 5, 6 ]
-    }
-}
+//     }
+//   }
 
-// - [ ] **T-012**: Create an Array of 10 elements. Use the `splice()` method to empty the array.
-// let cars = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// cars.splice(0, 10);
-// console.log(`cars: [${cars}]`); //cars: []
+// }
+// compare(ar1, ar2);
+// console.log(`both is: ${both}`);
 
-// - [ ] **T-013**: Create an Array of 10 elements. You can empty the array in multiple ways: using the `length` property, using the `pop()` method, 
-// using the `shift()` method, setting the array with `[]`, or the `splice()` method. Which among these methods are most efficient and why?
-// The setting of array with '[]' is the quickest way of emptying an array, 
+// console.log(`common is: ${common}`);
 
-// - [ ] **T-014**: What happens when you concatenate two empty arrays?
-// the merged array has the value of an empty array 
-let arrsen = []; let uburn = []; let merge = arrsen.concat(uburn); //console.log(merge);
 
-// - [ ] **T-015**: How can you check if a value is partially matching with any of the elements of an Array?
-// using includes() that gives true or false
-let greeting = "Hello World";
-if (greeting.includes("Hell")) {
-    // console.log("It exists!") //It exists! 
-}
-// - [ ] **T-016**: What is the difference between the slice() and splice() methods?
-// slice is used to copy Elements and their values, while splice adds removes elements in an arr 
-
-// - [ ] **T-017**: Create an Array of alphanumeric strings. Sort the elements in both ascending and descending orders. You must be doing this in an immutable way such that the source array never gets modified.
-let str = ["std001", "alpha432", "dukesamir33"];
-str.sort(function (a, b) {
-    return a === b ? 0 : a > b ? 1 : -1
-});
-
-// console.log(str) //[ 'alpha432', 'dukesamir33', 'std001' ] 
-str.sort(function (a, b) {
-    return a === b ? 0 : a > b ? -1 : 1
-});
-// console.log(str) //[ 'std001', 'dukesamir33', 'alpha432' ] 
-
-// - [ ] **T-018**: Can you give examples of sparse and dense arrays?
-// - [ ] **T-019**: Give a practical usages of the .fill() method 
-let gender = ["female", "male", "both"];
-gender.fill("human", 0, 3);
-// console.log(gender) //[ 'human', 'human', 'human' ]
-gender.fill("alive", 0,2); //[ 'alive', 'alive', 'both' ]
-// console.log(gender);
-
-// - [ ] **T-020**: How to convert an array to a string?
-let fin = [1, 2, 3];              let strn = fin.toString();          console.log(typeof strn); //string
-
-// > Consider these input arrays for question **T-21** to **T-48**
-// - `employees array`: An array of emplyees working in a department.
-
-  const employees = [
-    { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
-    { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
-    { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
-    { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
-    { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
-    { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
-    { id: 7, name: "George", departmentId: 3, salary: 5200 },
-    { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
-    { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
-    { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
-  ];
-
-// - `departments array`: An array of departments where emplyees work.
-
-  const departments = [
-    { id: 1, name: "HR" },
-    { id: 2, name: "Engineering" },
-    { id: 3, name: "Marketing" },
-    { id: 4, name: "Sales" },
-  ];
-
-// - [ ] **T-021**: Can you filter employees who work in the "Engineering" department?
-
-// - [ ] **T-022**: Create a new array that combines employee names and department names in the format: "Alice (HR)".
-// - [ ] **T-023**: Find the highest salary among employees.
-// - [ ] **T-024**: Check if there is at least one employee in the "Sales" department.
-// - [ ] **T-025**: Write a function to filter employees earning more than 6000.
-// - [ ] **T-026**: Create an array of employee names only.
-// - [ ] **T-027**: Calculate the total salary of all employees using
-// - [ ] **T-028**: Is there any employee earning less than 5000?
-// - [ ] **T-029**: Find the first employee who earns exactly 5100.
-// - [ ] **T-030**: Find the last employee in the "HR" department.
-// - [ ] **T-031**: Find the first employee in the "Marketing" department.
-// - [ ] **T-032**: Check if all employees earn more than 4000.
-// - [ ] **T-033**: Find the first employee in the "Sales" and "HR" department.
-// - [ ] **T-034**: Verify if all employees belong to a department listed in the departments array.
-// - [ ] **T-035**: Log each employee's name and department name to the console.
-// - [ ] **T-036**: Extract all employee names into a single array.
-// - [ ] **T-037**: Increment each employee's salary by 10%
-// - [ ] **T-038**: Assume each employee can have multiple skills. Create an array of employee skills and flatten them. Example: [{name: "Alice", skills: ["Excel", "Management"]}, ...].
-// - [ ] **T-039**: Find the total salary of all employees working in the "Engineering" department.
-// - [ ] **T-040**: Check if there is any department where all employees earn more than 5000.
-// - [ ] **T-041**: Assume each employee has a projects array (e.g., { id: 1, name: "Alice", projects: ["Project A", "Project B"] }).
-// Find the total number of unique projects being handled across all employees.
-// - [ ] **T-042**: For each employee, find their department name and return an array of employee names with their department names.
-// - [ ] **T-043**: Get a list of names of employees earning more than 6000.
-// - [ ] **T-044**: Write a for-of loop to print the names of all employees from the employees array.
-// - [ ] **T-045**: Using a for-of loop, print the names of employees earning more than 5000.
-// - [ ] **T-046**: Modify the for-of loop to destructure each employee object and log their name and salary.
-// - [ ] **T-047**: Write a for-of loop to match employees with their departments and print the results.
-// - [ ] **T-048**: Use Array.prototype.entries() with a for-of loop to print the index and name of each employee.
-
-// - [ ] **T-049**: Given the array-like object below, access the second element and log it:
-
-//   ```js
-//   const arrayLike = { 0: "First", 1: "Second", length: 2 };
-//   ```
-
-// - [ ] **T-050**: Write a function that takes a variable number of arguments and converts the arguments object into a real array using Array.from.
-// - [ ] **T-051**: Write a snippet to select all div elements on a webpage (using document.querySelectorAll) and convert the resulting NodeList into an array.
-// - [ ] **T-052**: Merge these two arrays into a single array:
-
-//   ```js
-//   const arr1 = [1, 2];
-//   const arr2 = [3, 4];
-//   ```
-
-// - [ ] **T-053**: Create an array of n duplicate values using Array.from. Input: Create an array with 5 "A" values. Output: ["A", "A", "A", "A", "A"]
-// - [ ] **T-054**: Use Array.from to convert a string like "Hello" into an array of characters.
-// - [ ] **T-055**: For the array, ['apple', 'banana', 'apricot', 'mango', 'blueberry'], group words by their first letter using group().
-// - [ ] **T-057**: From this array [3, 7, 3, 2, 3, 8, 7, 7], find the most repeated number. Hint: Use array method.
-// - [ ] **T-058**: Find the median of [5, 2, 9, 1, 3, 6, 8].
-// - [ ] **T-059**: Convert this array [['a', 1], ['b', 2], ['c', 3]], into { a: 1, b: 2, c: 3 } using array method(s).
-// - [ ] **T-060**: Flatten and convert all letters to uppercase in one step using flatMap(). Here is input array: [['a', 'b'], ['c', 'd']].
-// - [ ] **T-061**: Count the occurrences of each fruit in this array: ['apple', 'banana', 'apple', 'mango', 'banana', 'banana']
-// - [ ] **T-062**: Extract extract [‘b’, ‘c’, ‘d’] using slice() from this array: ['a', 'b', 'c', 'd', 'e']
-// - [ ] **T-063**: Sort the array [9, 3, 1, 6, 8] in ascending order using toSorted()
-// - [ ] **T-064**: Reverse [1, 2, 3, 4, 5] using toReversed() and compare it with reverse()
-// - [ ] **T-065**: Group the follwing array elements based on age(Adult vs Non-Adult):
-
-// ```js
-// const users = [
-//   { name: 'Alice', age: 55 },
-//   { name: 'Bob', age: 3 },
-//   { name: 'Charlie', age: 25 },
-// ];
-// ```
-
-// - [ ] **T-066**: Find the longest word in this sentence using Array and Array methods: "40 Days of JavaScript by tapaScript is a powerful initiative".
-// - [ ] **T-067**: Find common elements between two arrays, [1, 2, 3, 4], [3, 4, 5, 6]
